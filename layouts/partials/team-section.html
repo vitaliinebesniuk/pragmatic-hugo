@@ -1,0 +1,37 @@
+<section class="team-section" id="our_team">
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <!-- <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li> -->
+            </ol>
+            <div class="carousel-inner">
+                {{ range .Site.Params.team.item }}
+                <div class="item {{ .active }}">
+                    <h2 class="section-title">{{ .title }}</h2>
+                    <p class="section-paragraph">{{ .subtitle_1 }}<br/> {{ .subtitle_2 }}</p>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-5">
+                            <img src="{{ .image_src }}" alt="team" class="team-img"/>
+                        </div>
+                        <div class="col-lg-9 col-sm-7 team-member">
+                            <h3>{{ .name }}</h3>
+                            <h4>{{ .location }}</h4>
+                            <p>{{ .description }}</p>
+                            <div class="socials">
+                                <div class="circle">
+                                    <a href="{{ .url_src }}" target="_blank"><img src="{{ .linkedin }}" alt="social" class="social-img"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>        
+    </div>
+</section>

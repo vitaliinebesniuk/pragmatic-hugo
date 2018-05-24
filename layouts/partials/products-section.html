@@ -1,0 +1,33 @@
+<section class="products-section" id="our_services">
+    <div class="container">
+        {{ with .Site.Params.products }}
+        <h2 class="section-title">{{ .title }}</h2>
+        <p class="section-paragraph">{{ .subtitle_1 }}<br/>{{ .subtitle_2 }}</p>
+        {{ end }}
+        <div class="row service-packages">
+            {{ range .Site.Params.products.item }}
+            <div class="col-sm-4 package {{ .middle_package }}">
+                <div class="img-wrapper">
+                    <img src="{{ .image_src }}" alt="service" class="service-img"/>
+                    <div class="{{ .overlay}}"></div>
+                </div>
+                <div class="package-info">
+                    <span class="service-description">
+                        {{ .service_description_1 }}<br/>
+                        {{ .service_description_2 }}
+                    </span>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <span class="crossed-price">{{ .crosssed_price }}</span>
+                            <span class="price">{{ .price }}</span>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="{{ .shop_link }}" target="_blank"><img src="{{ .shop_img }}" alt="shop"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

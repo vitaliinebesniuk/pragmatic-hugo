@@ -1,0 +1,230 @@
+baseURL = "http://paiml.com"
+languageCode = "en-us"
+pluralizelisttitles = false
+title = ""
+
+# Navigation
+    [menu]
+        [[menu.main]]
+        url = "#about_us"
+        name = "Home"
+        weight = 1
+
+        [[menu.main]]
+        url = "#about_us"
+        name = "About US"
+        weight = 2
+
+        [[menu.main]]
+        url = "#about_us"
+        name = "Our Services"
+        weight = 3
+
+        [[menu.main]]
+        url = "#partners"
+        name = "Partners"
+        weight = 4
+
+        [[menu.main]]
+        url = "#contact_us"
+        name = "Contact Us"
+        weight = 5
+
+        [[menu.main]]
+        url = "#contact_us"
+        name = "Get Started"
+        weight = 6
+
+[params]
+    [params.logo]
+        logo_src="/images/logo_main.png"
+
+    # Intro
+        [params.intro]
+            title= "Experts on Cloud Native Machine Learning and AI Solutions"
+            button_url ="#about_us"
+            button_text ="About us"
+        
+    # Features
+        [params.features]
+            [[params.features.item]]
+                slope = "left-slope"
+                declarations = "declarations-left"
+                icon_src = "/images/icon_1.png"
+                title = "Training on AI, Cloud and Python"
+                subtitle = "Pragmatic AI: Three Day Cloud-based Python Machine Learning Workshop"
+                button_text = "Upcoming Training"
+                button_url = "//www.eventbrite.com/e/pragmatic-ai-three-day-cloud-based-python-machine-learning-workshop-tickets-46043109179"
+
+            [[params.features.item]]
+                slope = "right-slope"
+                declarations = "declarations-right"
+                icon_src = "/images/icon_2.png"
+                title = "Consulting on AI, Machine Learning, Cloud and Python"
+                subtitle = "Let us know how we can help your company succeed in AI, Machine Learning and the cloud."
+                button_text = "Learn more"
+                button_url = "#contact_us"
+
+    # Products
+        [params.products]
+            title = "OUR PRODUCTS"
+            #subtitle_1 = "It is a long established fact that a reader will be distracted by the readable content of"
+            #subtitle_2 = "a page when looking at its layout. The point of using Lorem Ipsum"
+
+            [[params.products.item]]
+                middle_package = ""
+                image_src = "images/service_1.jpg"
+                overlay = ""
+                service_description_1 = "Pragmatic AI:  An Introduction to Cloud-based Machine Learning"
+                button_url = "https://www.amazon.com/Pragmatic-AI-Introduction-Cloud-based-Learning/dp/0134863860"
+                #service_description_2 = "(which is linked)"
+                #crosssed_price = "28,97"
+                #price = "$ 14,99"
+                shop_img = "images/shop.png"
+                shop_link = "https://www.amazon.com/Pragmatic-AI-Introduction-Cloud-based-Learning/dp/0134863860"
+
+            #[[params.products.item]]
+            #    middle_package = "middle-package"
+            #    image_src = "images/service_2.jpg"
+            #    overlay = "overlay-lite"
+            #    service_description_1 = "FitML:  Saas Machine Learning product to augment fitness and nutrition behavior"
+            #    service_description_2 = "nutrition recommendations"
+            #    crosssed_price = "24,95"
+            #    price = "$ 35,00"
+            #    shop_img = "images/shop_white.png"
+            #     shop_link = ""
+
+            [[params.products.item]]
+                middle_package = ""
+                image_src = "images/service_3.jpg"
+                overlay = ""
+                service_description_1 = "DEVML:  Saas Machine Learning product to help augment software team intelligence"
+            #    service_description_2 = "team management"
+            #    crosssed_price = "18,97"
+            #    price = "$ 17,67 €"
+                shop_img = "images/shop.png"
+                shop_link = "https://github.com/noahgift/devml"
+
+    # Partners
+        [params.partners]
+            title ="Our partners"
+            #subtitle_1 = "It is a long established fact that a reader will be distracted by the readable content of "
+            #subtitle_2 = "a page when looking at its layout. The point of using Lorem Ipsum"
+            
+            [[params.partners.item]]
+                img_src = "images/partner_1.png"
+            [[params.partners.item]]
+                img_src = "images/partner_2.png"
+            [[params.partners.item]]
+                img_src = "images/partner_3.png"
+            [[params.partners.item]]
+                img_src = "images/partner_4.png"
+            [[params.partners.item]]
+                img_src = "images/partner_5.png"
+
+    # Team
+        [params.team]
+            [[params.team.item]]
+                active = "active"
+                title = "Founder"
+                #subtitle_1 = "On the other hand, we denounce with righteous indignation and dislike men who are"
+                #subtitle_2 = "so beguiled and demoralized by the charms of pleasure of the momen"
+                image_src = "images/NoahGift.jpg"
+                name = "Noah Gift"
+                location = "San Francisco, CA"
+                description = "Lecturer and consultant at UC Davis Graduate School of Management’s MSBA program, has held business roles including CTO, general manager, consulting CTO, and cloud architect. He consults with start-ups and other companies on machine learning and cloud architecture, Python Software Foundation Fellow, AWS Subject Matter on Machine Learning, and has published books on cloud machine learning and DevOps."
+
+                linkedin = "images/linkedin.png"
+                url_src = "https://www.linkedin.com/in/noahgift/"
+
+            [[params.team.item]]
+                active = "active"
+                title = "Founder"
+                #subtitle_1 = "On the other hand, we denounce with righteous indignation and dislike men who are"
+                #subtitle_2 = "so beguiled and demoralized by the charms of pleasure of the momen"
+                image_src = "images/KennedyBehrman.jpg"
+                name = "Kennedy Behrman"
+                location = "San Francisco, CA"
+                description = "A calm and deliberate manager who uses a collaborative leadership style to lead and inspire."
+                linkedin = "images/linkedin.png"
+                url_src = "https://github.com/noahgift/devml"
+                
+    # Footer
+        [params.footer]
+            logo_link = "#home"
+            logo_src_1 = "images/logo.png"
+            logo_src_2 = "images/logo_text.png"
+            menu_title = "QUICK LINKS"
+            menu_title_src = "#about_us"
+            contacts_title = "Come find us"
+            newsletter_title = "Subscribe To Newsletter"
+            social_title = "STAY CONNECTED"
+            copyright_text = "©Copyright 2018 Pragmatic AI Labs . All Rights Reserved"
+            privacy_url = "#"
+            privacy_text = "Privacy Policy   |   Terms & Conditions"
+
+            [[params.footer_menu.item]]
+                url_src = "#home"
+                url_text = "Home"
+            [[params.footer_menu.item]]
+                url_src = "#about_us"
+                url_text = "About US"
+            [[params.footer_menu.item]]
+                url_src = "#our_team"
+                url_text = "Our Team"
+            [[params.footer_menu.item]]
+                url_src = "#our_services"
+                url_text = "Products"
+            [[params.footer_menu.item]]
+                url_src = "#contact_us"
+                url_text = "Contact Us"
+
+            [[params.footer_contacts.item]]
+                url_src = "https://www.google.com/maps?q=san+francisco+ca&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjPq5727v7aAhUoTt8KHWyTC54Q_AUICygC"
+                icon = "glyphicon-map-marker"
+                text = "San Francisco, CA"
+            [[params.footer_contacts.item]]
+                url_src = "#"
+                icon = "glyphicon-map-marker"
+                text = "Wellington, New Zealand"
+            [[params.footer_contacts.item]]
+                url_src = "mailto:info@paiml.com"
+                icon = "glyphicon-envelope"
+                text = "info@paiml.com"
+            [[params.footer_contacts.item]]
+                url_src = "tel:(415) 855-0254"
+                icon = "glyphicon-earphone"
+                text = "+(415) 855-0254"
+
+            [[params.footer_socials.item]]
+                url = "#"
+                img_src = "images/tw.png"
+
+            [[params.footer_socials.item]]
+                url = "#"
+                img_src = "images/linkedin.png"
+
+            [[params.footer_socials.item]]
+                url = "https://github.com/noahgift/pragmaticai"
+                img_src = "images/github.svg"
+
+    # Favicon
+        [params.favicon]
+            apple_touch = "/apple-touch-icon.png"
+            icon_32 = "/favicon-32x32.png"
+            icon_16 = "/favicon-16x16.png"
+            webmanifest = "/site.webmanifest"
+            safari = "/safari-pinned-tab.svg"
+            title_color = "#da532c"
+            theme_color = "#ffffff"
+
+
+    
+    
+    
+
+    
+   
+
+
+   

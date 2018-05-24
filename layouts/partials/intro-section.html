@@ -1,0 +1,33 @@
+<section class="intro-section">
+    {{ partial "header.html" . }}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            {{ with .Site.Params.intro }}
+            <div class="col-lg-7 col-sm-6">
+                <h1 class="page-title">{{ .title }}</h1>
+                <a href="{{ .button_url }}" class="orange-button">{{ .button_text }}</a>
+            </div>
+            {{ end }}
+            <div class="col-lg-5 col-sm-6">
+                <!-- <div class="form-border" id="contact_us">
+                    <form class="form-section">
+                        <div class="overlay"></div>
+                        <h3>Contact</h3>
+                        <span>First name:</span><br>
+                        <input type="text" name="firstname" value="">
+                        <span>Email:</span><br>
+                        <input type="email" name="email" value="">
+                        <span>Phone number:</span><br>
+                        <input type="text" name="phone" value="">
+                        <input type="submit" class="submit-btn" value="Submit now">
+                    </form>
+                </div>  -->
+                <div class="form-border border-hide" id="contact_us">
+                    <h3 class="form-title">Contact</h3>
+                    <div class="typeform-widget" data-url="https://noahgift.typeform.com/to/xJVNEX" style="width: 335px; height: 520px; background-position-y: 35%; background-position-x: 65%;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

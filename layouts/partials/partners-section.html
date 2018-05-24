@@ -1,0 +1,15 @@
+<section class="partners-section" id="partners">
+    <div class="container">
+        {{ with .Site.Params.partners }}
+        <h2 class="section-title">{{ .title }}</h2>
+        <p class="section-paragraph">{{ .subtitle_1 }}<br/>{{ .subtitle_2 }}</p>
+       {{ end }}
+        <div class="row partners-row">
+            {{ range .Site.Params.partners.item }}
+            <div class="partners-wrapper">
+                <a href="" target="_blank"><img src="{{ .img_src }}" alt="partner" class="partners-img"/></a>
+            </div>
+            {{ end }}
+       </div>
+    </div>
+</section>

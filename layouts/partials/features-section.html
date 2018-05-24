@@ -1,0 +1,15 @@
+<section class="features-section" id="about_us">
+    {{ range .Site.Params.features.item }}
+        <div class="half {{ .slope }}">
+            <div class="{{ .declarations }}"></div>
+            <div class="blue-wrapper">
+                <div class="white-circle">
+                    <img src ="{{ .icon_src }}" alt="services"/>
+                </div>
+                <h2>{{ .title }}</h2>
+                <p>{{ .subtitle}}</p>
+                <a href="{{ .button_url }}"><button class="orange-button">{{ .button_text }}</button></a>
+            </div>  
+        </div>
+    {{ end }}
+</section>

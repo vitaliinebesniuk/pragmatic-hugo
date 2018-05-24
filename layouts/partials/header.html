@@ -1,0 +1,45 @@
+<header class="header-block" id="home">
+    <div class="container">
+        <nav>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>               
+                <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+                    {{ with .Site.Params.logo }}
+                        <img src="{{ .logo_src }}" alt="logo" class="logo"/>
+                    {{ end }}
+                </a>
+            </div>
+            <div class="collapse navbar-collapse no-padding" id="bs-example-navbar-collapse-1">
+                <ul class="header-nav">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                    <span>{{ .Name }}</span>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    {{ range .Children }}
+                                        <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+                                    {{ end }}
+                                </div>
+                            </li>
+                        {{ else }}
+                            <li>
+                                <a href="{{ .URL }}" class="menu-item">
+                                    {{ .Name }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

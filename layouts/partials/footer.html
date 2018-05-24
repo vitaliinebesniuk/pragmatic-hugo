@@ -1,0 +1,75 @@
+<footer class="footer-block">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-5">
+                    {{ with .Site.Params.footer }}
+                    <div class="row">
+                        <div class="col-sm-6 no-display">
+                            <a href="{{ .logo_link }}">
+                                <img src="{{ .logo_src_1 }}" alt="logo" class="footer_logo"/>
+                                <img src="{{ .logo_src_2 }}" alt="logo" class="footer_logo"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <a href="{{ .menu_title_src }}"><h5>{{ .menu_title }}</h5></a>
+                    {{ end }}
+                            <ul>
+                                {{ range .Site.Params.footer_menu.item }}
+                                <li><a href="{{ .url_src }}">{{ .url_text }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-7">
+                    {{ with .Site.Params.footer.contacts_title }}<h5>{{ . }}</h5>{{ end }}
+                    <ul>
+                        {{ range .Site.Params.footer_contacts.item }}
+                        <li>
+                            <a href="{{ .url_src }}">
+                                <span class="glyphicon {{ .icon }} footer-icon"></span>{{ .text }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    {{ with .Site.Params.footer.newsletter_title }}<h5 class="no-padding">{{ . }}</h5>{{ end }}
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                        <form action="https://paiml.us18.list-manage.com/subscribe/post?u=b2de642de1ed7b9d79309ec22&amp;id=d0076c07f6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <input type="email" value="" name="EMAIL" class="email input" id="mce-EMAIL" placeholder="Enter Your Email" required>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b2de642de1ed7b9d79309ec22_d0076c07f6" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="send-button"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+                    {{ with .Site.Params.footer.social_title }}<h5 class="no-padding">{{ . }}</h5>{{ end }}
+                    <div class="socials">
+                        {{ range .Site.Params.footer_socials.item }}
+                        <a href="{{ .url }}" target="_blank"><img src="{{ .img_src }}" alt="social" class="social-img"/></a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                {{ with .Site.Params.footer }}
+                <div class="col-sm-6 col-xs-12">
+                    <span>{{ .copyright_text }}</span>
+                </div>
+                <div class="col-sm-6 col-xs-12 right-align">
+                    <a href="{{ .privacy_url }}" target="_blank"><span>{{ .privacy_text }}</span></a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>
